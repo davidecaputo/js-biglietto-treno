@@ -19,25 +19,25 @@ let chilometriUtente = parseInt (prompt ('Quanti kilometri vuoi percorrere col t
 let anniUtente = parseInt (prompt ('Quanti anni hai?'));
 let prezzoBiglietto = (0.21 * chilometriUtente);
 let scontoMinorenni = prezzoBiglietto - (prezzoBiglietto * 0.20);
-let scontoOver60 = prezzoBiglietto - (prezzoBiglietto * 0.40);
+let scontoOver65 = prezzoBiglietto - (prezzoBiglietto * 0.40);
 
 console.log(prezzoBiglietto);
 console.log(scontoMinorenni);
-console.log(scontoOver60);
+console.log(scontoOver65);
 
 
 if(!isNaN(chilometriUtente && anniUtente)){
     if (anniUtente <= 18){
         document.getElementById('totale').innerHTML += `
-            <p>${scontoMinorenni}€</p>
+            <h2>${scontoMinorenni.toFixed(2) + '€'}</h2>
         `
     } else if(anniUtente > 65){
         document.getElementById('totale').innerHTML += `
-            <p>${scontoOver60}</p>    
+            <h2>${scontoOver65.toFixed(2) + '€'}</h2>    
         `
     } else {
         document.getElementById('totale').innerHTML += `
-            <p>${prezzoBiglietto}</p>
+            <h2>${prezzoBiglietto + '€'}</h2>
         `
     }
 } else {
