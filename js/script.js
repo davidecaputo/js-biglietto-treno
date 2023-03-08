@@ -37,7 +37,7 @@ if(!isNaN(chilometriUtente && anniUtente)){
         `
     } else {
         document.getElementById('totale').innerHTML += `
-            <h2>${prezzoBiglietto + '€'}</h2>
+            <h2>${prezzoBiglietto.toFixed(2) + '€'}</h2>
         `
     }
 } else {
