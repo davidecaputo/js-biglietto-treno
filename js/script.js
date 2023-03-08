@@ -42,6 +42,6 @@ if(!isNaN(chilometriUtente && anniUtente)){
     }
 } else {
     document.getElementById('totale').innerHTML = `
-        ${'Inserisci dei valori validi'}
+        <h1>${'Inserisci dei valori validi'}</h1>
     `
 }
