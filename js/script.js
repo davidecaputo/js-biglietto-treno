@@ -23,3 +23,17 @@ let scontoMinorenni = prezzoBiglietto - (prezzoBiglietto * 0.20);
 console.log(scontoMinorenni);
 let scontoOver60 = prezzoBiglietto - (prezzoBiglietto * 0.40);
 console.log(scontoOver60);
+
+if (anniUtente <= 18){
+    document.getElementById('totale').innerHTML += `
+        <p>${scontoMinorenni}€</p>
+    `
+} else if(anniUtente > 60){
+    document.getElementById('totale').innerHTML += `
+        <p>${scontoOver60}</p>    
+    `
+} else {
+    document.getElementById('totale').innerHTML += `
+        <p>${prezzoBiglietto}</p>
+    `
+}
