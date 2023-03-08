@@ -18,10 +18,11 @@ creiamo una variabile per lo sconto agli over 65
 let chilometriUtente = parseInt (prompt ('Quanti kilometri vuoi percorrere col treno?'));
 let anniUtente = parseInt (prompt ('Quanti anni hai?'));
 let prezzoBiglietto = (0.21 * chilometriUtente);
-console.log(prezzoBiglietto);
 let scontoMinorenni = prezzoBiglietto - (prezzoBiglietto * 0.20);
-console.log(scontoMinorenni);
 let scontoOver60 = prezzoBiglietto - (prezzoBiglietto * 0.40);
+
+console.log(prezzoBiglietto);
+console.log(scontoMinorenni);
 console.log(scontoOver60);
 
 
@@ -30,7 +31,7 @@ if(!isNaN(chilometriUtente && anniUtente)){
         document.getElementById('totale').innerHTML += `
             <p>${scontoMinorenni}€</p>
         `
-    } else if(anniUtente > 60){
+    } else if(anniUtente > 65){
         document.getElementById('totale').innerHTML += `
             <p>${scontoOver60}</p>    
         `
